@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Playfair+Display&display=swap');
+
+/* Reset Box */
+html, body, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
+    color: var(--black2);
+    background-color: var(--primary);
+    height: 100%;
+}
+
+h2 {
+    margin-top: 3rem;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Cinzel Decorative',serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem;
+    letter-spacing: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(var(--black), var(--black2));
+    color: var(--gray2);
+}
+
+footer a {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+hr {
+    height: 0.1rem;
+    max-width: 100%;
+    border: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--black2), rgba(0, 0, 0, 0));
+}
+
+/* VARIABLES GLOBALES */
+.even {
+    background-color: var(--white2);
+}
+
+:root {
+    --primary: #F2ebb6;
+    --primary-dark:rgb(197, 191, 135);
+    --secondary: #A2a87a;
+    --secondary-dark:#828662;
+    --white:#f7f1b2;
+    --white2:#abb187;
+    --gray:#948f65;
+    --gray2:#aca776;
+    --gray3:#bec2a2;
+    --black:#414331;
+    --black2:#313225;
+}

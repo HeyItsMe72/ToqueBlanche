@@ -1,0 +1,224 @@
+@import url(root.css);
+/* STANDAR VALUES MODALS */
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.634);
+    animation: modal-open .8s;
+}
+
+#contactM,
+#plough,
+#cull-pistol,
+#degustation-emotion {
+    display: none;
+}
+
+.modal {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 25px;
+    border: 2px solid var(--black);
+    background-color:var(--primary);
+    z-index: 3;
+}
+
+.main-modal {
+    text-align: center;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+.close-modal:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.none {
+    display: none;
+    opacity: 0;
+}
+
+/* PERSONALIZED STYLES FOR EACH MODAL */
+
+/* CONTACT MODAL */
+.contact-modal {
+    display: block;
+    justify-content: center;
+    width: 70%;
+    height: max-content;
+    overflow-y: scroll;
+}
+
+.contact-modal img {
+    width: 100px;
+    margin: 1rem 0;
+}
+
+.contact-modal .text-container h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.text p {
+    margin: 1rem;
+}
+
+.contact-form {
+    display: grid;
+    margin: 0 1rem;
+}
+
+.contact-form input, textarea{
+    padding: 3px;
+    resize: none;
+    margin: 5px;
+    border: 2px solid var(--secondary-dark);
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact-form input[type="submit"]{
+    width: 30%;
+    margin: 0 auto 1rem;
+    border-radius: 25px;
+    border: 2px solid var(--secondary-dark);
+    background-color: var(--primary-dark);
+    letter-spacing: 1px;
+}
+
+.contact-form-loader img {
+    width: 40px;
+}
+
+.contact-form-response {
+    margin: 1rem auto;
+    font-weight: bolder;
+}
+
+@keyframes modal-open {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* EXPERIENCE MODALS */
+.experience-modal {
+    width: 50%;
+    
+}
+
+.experience-modal h3 {
+    margin: 3rem auto 1rem;
+}
+
+.experience-modal .main-modal {
+    letter-spacing: 1px;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.experience-modal ol{
+    list-style: disc inside;
+    margin: 1rem auto;
+
+}
+
+/* TABLETS */
+@media screen and (min-width: 690px) and (max-width: 1024px) {
+    .contact-modal {
+        width: 90%;
+        height: max-content;
+    }
+    .contact-modal .text-container {
+       display: flex;
+       align-items: center;
+       margin: 3rem 2rem 1rem;
+       grid-template-columns: repeat(2, 1fr);
+    }
+    .text-container img {
+        width: 150px;
+        margin: 0 1rem;
+    }
+
+    .contact-modal .text h2 {
+        font-size: 2rem;
+    }
+
+    .contact-modal {
+        font-size: 1.2rem;
+    }
+
+    .contact-form input, textarea {
+        font-size: 1rem;
+    }
+
+    .contact-form input[type="submit"] {
+        margin-top: 1rem;
+    }
+}
+
+/* LAPTOPS */
+
+@media screen and (min-width: 1024px) {
+    .contact-modal {
+        overflow: hidden;
+    }
+    .contact-modal .text-container {
+        display: flex;
+        align-items: center;
+        margin: 2rem auto 0; 
+        width: 90%;   
+    }
+    .contact-modal .text-container h2{
+        font-size: 2rem;
+    }
+    .contact-modal {
+        font-size: 1.3rem;
+    }
+    .text-container img {
+        margin: 0 1rem;
+    }
+    .contact-modal img {
+        width: 200px;
+    }
+    .contact-form {
+        margin: 0 3rem;
+    }
+    .contact-form input, textarea{
+        font-size: 1rem;
+    }
+    .contact-form input[type="submit"]{
+        margin: 10px auto;
+    }
+    .contact-form-loader img {
+        width: 30px;
+    }
+}
+

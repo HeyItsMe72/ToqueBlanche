@@ -1,0 +1,201 @@
+@import url(root.css);
+
+header {
+    background-color: var(--primary);
+}
+
+header h1 {
+    font-family: 'Cinzel Decorative',serif;
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 3rem;
+}
+
+header hr {
+    margin-bottom: 3rem;
+}
+
+/* NAV */
+.header-nav {
+    background-color: var(--primary-dark);
+    width: 100%;
+    box-shadow: 0 0 10px 1px var(--black);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.header-nav .main-menu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: .8rem;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.header-nav .main-menu li:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    background: linear-gradient(var(--primary), var(--secondary-dark));
+    border-top: 1px solid var(--white2);
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.dropdown li {
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown li a, .main-menu a {
+    text-decoration: none;
+    color: var(--black);
+    transition: all .3s ease;
+}
+
+.dropdown li:hover{
+    background-color: var(--black);
+}
+
+.dropdown li:hover a{
+    color: var(--white);
+}
+
+.main-menu > li {
+    padding: 1rem;
+}
+
+.main-menu > li:hover{
+    background-color: var(--secondary-dark);
+}
+
+.main-menu > li:hover > a {
+    color: var(--white);
+}
+
+.title {
+    font-family: 'Cinzel Decorative',serif;
+    letter-spacing: 0;
+}
+
+/* ARTICLE EVEN */
+.contact-button{
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
+    border: 2px solid var(--white);
+    background-color: var(--gray2);
+    margin-top: 2rem;
+    font-size: .9rem;
+    color: var(--black);
+}
+
+.contact-button:hover{
+    background-color: var(--black);
+    color: var(--primary);
+}
+
+.text-header {
+    font-size: 1rem;
+    letter-spacing: 5px;
+    text-align: center;
+    width: 40%;
+}
+
+.even-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    padding: 2rem;
+}
+
+.even img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+/* SLIDER FRAME */
+.slider-frame {
+    max-width: 350px;
+    max-height: auto;
+    width: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider-frame ul{
+    display: flex;
+    animation: slide 15s infinite alternate ease-in-out;
+}
+
+.slider-frame ul li {
+    list-style: none;
+}
+
+
+@keyframes slide {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    40% {margin-left: -100%;}
+
+    45% {margin-left: -200%;}
+    60% {margin-left: -200%;}
+
+    65% {margin-left: -300%;}
+    85% {margin-left: -300%;}
+
+    90% {margin-left: -400%;}
+    100% {margin-left: -400%;}
+}
+
+/* TABLETS */
+@media screen and (min-width: 690px) and (max-width: 1024px) {
+    .even img {
+        width: 250px;
+    }
+    .header-nav .main-menu {
+        font-size: 1rem;
+    }
+
+    .text-header {
+        font-size: 1.2rem;
+    }
+    
+    .slider-frame {
+        width: 250px;
+    }
+}
+
+/* LAPTOPS */
+@media screen and (min-width: 1024pX) {
+    .even-header {
+        padding: 5rem 0;
+    }
+    .even img {
+        width: 350px;
+    }
+    .header-nav .main-menu {
+        font-size: 1.2rem;
+    }
+
+    .text-header {
+        font-size: 2rem;
+    }
+    
+    .slider-frame {
+        width: 350px;
+    }
+}

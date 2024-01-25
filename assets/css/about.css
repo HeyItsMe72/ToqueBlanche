@@ -1,0 +1,113 @@
+@import url(root.css);
+
+#about {
+    display: block;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#about h2 {
+    margin: 0;
+}
+
+
+/* EXPERIENCE ARTICLE */
+.experience {
+    width: 100%;
+    
+}
+
+.work-title {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    margin-top: 5px;
+
+}
+
+.experience-div img {
+    box-shadow: 0 0 5px 5px var(--black2);
+    cursor: zoom-in;
+    transition: all .3s ease-in-out;
+    width: 250px;
+}
+
+.experience img:hover {
+    box-shadow: 0 0 5px 5px var(--white);
+    transform: scale(1.15);
+}
+
+.experience p {
+    font-size: 1.2rem;
+    letter-spacing: 0;
+}
+
+.experience > div {
+    margin-bottom: 3rem;
+}
+
+/* EDUCATION ARTICLE */
+.education {
+    display: block;
+}
+
+.education img {
+    box-shadow: 0 0 15px 2px rgb(105, 19, 19);
+    width: 50%;
+}
+
+.education-info {
+    margin: 2rem auto;
+    font-size: 1.3rem;
+}
+
+.education-info a {
+    font-size: 1.2rem;
+    color: var(--black2);
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+/* TABLETS & LAPTOPS GENERAL*/
+@media screen and (min-width: 850px) {
+    .experience {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        overflow-x: hidden;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .one {
+        grid-column: 1;
+        grid-row: 2 / 5;
+    }
+    
+    .two {
+        grid-column: 2;
+        grid-row: 2 / 5;
+    }
+    
+    .three {
+        grid-column: 3;
+        grid-row: 2 / 5;
+    }
+
+    .experience img {
+        width: 280px;
+    }
+
+    .education {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .education img {
+        margin: 0 auto;
+        width: 350px;
+    }
+
+    .education-info h4{
+        font-size: 1.8rem;
+    }
+}
