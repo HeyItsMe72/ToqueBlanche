@@ -15,7 +15,6 @@ function simulateMessage() {
         $message.classList.remove("none");
         setTimeout(() => {
             $message.classList.add("none");
-            // $modal.style.height = "80%";
             $inputEmail.value = "";
             $textArea.value = "";
         }, 2000);
